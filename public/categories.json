@@ -9,7 +9,7 @@
     "origin": "Sudamérica",
     "biotope": "Amazonas",
     "description": "Peces territoriales con gran personalidad y cuidados parentales.",
-    "image": "./public/categories/ciclidos.webp"
+    "image": "./categories/ciclidos.webp"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "origin": "Sudamérica",
     "biotope": "Aguas Negras",
     "description": "Pequeños peces de cardumen vibrantes para acuarios plantados.",
-    "image": "/public/categories/tetras.webp"
+    "image": "./categories/tetras.webp"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "origin": "Sudamérica",
     "biotope": "Ríos de Corriente",
     "description": "Peces gato acorazados especializados en superficies y madera.",
-    "image": "/public/categories/loricaridos.webp"
+    "image": "./categories/loricaridos.webp"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "origin": "Sudamérica",
     "biotope": "Fondos Arenosos",
     "description": "Siluriformes pacíficos de fondo como las Corydoras.",
-    "image": "/public/categories/calictidos.jpg"
+    "image": "./categories/calictidos.jpg"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "origin": "Asia",
     "biotope": "Ríos y Arrozales",
     "description": "Familia diversa que incluye Rasboras, Barbos y Danios.",
-    "image": "/public/categories/ciprinidos.webp"
+    "image": "./categories/ciprinidos.webp"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "origin": "Asia",
     "biotope": "Aguas Estancadas",
     "description": "Peces que respiran aire atmosférico como Bettas y Gouramis.",
-    "image": "/public/categories/laberintidos.jpg"
+    "image": "./categories/laberintidos.jpg"
   },
   {
     "id": 7,
@@ -81,6 +81,6 @@
     "origin": "Centroamérica",
     "biotope": "Ríos y Desembocaduras",
     "description": "Peces de fácil reproducción cuyos alevines nacen ya formados.",
-    "image": "/public/categories/viviparos.jpg"
+    "image": "./categories/viviparos.jpg"
   }
 ]
