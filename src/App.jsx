@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Header } from "./components/Header.jsx";
-import { Footer } from "./components/Footer.jsx";
+import { Footer } from "./components/footer.jsx";
 
 const HomePage = lazy(() => import("./pages/Home.jsx"));
 const FishCategory = lazy(() => import("./pages/FishCategory.jsx"));
