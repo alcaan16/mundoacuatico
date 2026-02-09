@@ -6,10 +6,8 @@ export default function FishDetail() {
   const { categorySlug, fishSlug } = useParams();
 
   const { fish, loading } = useFetchFishDetail(fishSlug);
-  console.log(fish);
   if (!fish) {
     return (
-      console.log("no encontrado"),
       <div
         className="container"
         style={{ padding: "5rem", textAlign: "center" }}
