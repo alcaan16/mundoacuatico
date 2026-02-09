@@ -1,16 +1,34 @@
-# React + Vite
+# 🐠 Mundo Acuario
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Mundo Acuario** es tu portal definitivo para descubrir y compartir la belleza del mundo subacuático. Diseñado con pasión para acuaristas, amantes de la naturaleza y curiosos por igual, este proyecto busca inspirar y educar sobre la vida marina.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌊 Explora la Vida Acuática
 
-## React Compiler
+Sumérgete en una experiencia visual donde cada especie cuenta una historia. **Mundo Acuario** te permite conectar con la biodiversidad de nuestros océanos y ríos a través de una interfaz moderna y fluida.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### ✨ Características Principales
 
-## Expanding the ESLint configuration
+- **📘 Catálogo Interactivo**: Navega por una extensa biblioteca de especies, desde los coloridos peces de arrecife hasta los majestuosos habitantes de agua dulce.
+- **🔍 Información Detallada**: Accede a fichas completas con datos sobre hábitat, alimentación y cuidados específicos para cada pez.
+- **📱 Diseño Adaptable**: Disfruta de una experiencia perfecta en cualquier dispositivo, ya sea móvil, tablet o escritorio.
+- **🚀 Navegación Fluida**: Muévete entre categorías y detalles de especies sin interrupciones, gracias a una arquitectura optimizada para la velocidad.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎯 Nuestra Misión
+
+Fomentar el conocimiento y el respeto por los ecosistemas acuáticos, proporcionando una herramienta accesible y atractiva para todos los niveles de experiencia en la acuariofilia.
+
+> _"El agua es la fuerza motriz de toda la naturaleza."_ – Leonardo da Vinci
+
+---
+
+### 🌟 Únete a la Comunidad
+
+¿Te apasiona el mundo acuático tanto como a nosotros? Explora, aprende y comparte tu pasión.
+
+---
+
+_(Desarrollado con ❤️ para la comunidad de acuariofilia)_

@@ -11,45 +11,45 @@ const FishDetail = lazy(() => import("./pages/FishDetail.jsx"));
 const NotFoundPage = lazy(() => import("./pages/404.jsx"));
 // --- APP PRINCIPAL ---
 
- function App() {
-   return (
-     <>
-       <Header />
-       <Suspense
-         fallback={
-           <div
-             style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 1rem" }}
-           >
-             Cargando...
-           </div>
-         }
-       >
-         <Routes>
-           <Route
-             path="/"
-             element={<HomePage />}
-           />
-           <Route
-             path="/category"
-             element={<FishCategory />}
-           />
-           <Route
-             path="/category/:categorySlug"
-             element={<FishList />}
-           />
-           <Route
-             path="/category/:categorySlug/:fishSlug"
-             element={<FishDetail />}
-           />
-           <Route
-             path="*"
-             element={<NotFoundPage />}
-           />
-         </Routes>
-       </Suspense>
-       <Footer />
-     </>
-   );
+function App() {
+  return (
+    <>
+      <Header />
+      <Suspense
+        fallback={
+          <div
+            style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 1rem" }}
+          >
+            Cargando...
+          </div>
+        }
+      >
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
+          <Route
+            path="/category"
+            element={<FishCategory />}
+          />
+          <Route
+            path="/category/:categorySlug"
+            element={<FishList />}
+          />
+          <Route
+            path="/category/:categorySlug/:fishSlug"
+            element={<FishDetail />}
+          />
+          <Route
+            path="*"
+            element={<NotFoundPage />}
+          />
+        </Routes>
+      </Suspense>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
