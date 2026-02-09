@@ -7,7 +7,7 @@
   "level": "Intermedio",
   "description": "El Tetra Cardenal es famoso por su intensa franja roja que recorre todo su cuerpo, a diferencia del neón común.",
   "description_full": "Los Cardenales son peces de cardumen que requieren estabilidad química. Prosperan en acuarios maduros, preferiblemente de aguas negras con taninos, donde sus colores eléctricos contrastan con la vegetación y troncos.",
-  "image": "/public/categories/tetras.webp",
+  "image": "./categories/tetras.webp",
   "gallery": [
     "/fish/cardenal-1.jpg",
     "/fish/cardenal-2.jpg",
