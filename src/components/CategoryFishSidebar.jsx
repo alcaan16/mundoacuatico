@@ -1,4 +1,4 @@
-export function Sidebar({ filters, onFilterChange, ORIGINS, LEVELS }) {
+export function CategorySidebar({ filters, onFilterChange, ORIGINS, LEVELS }) {
     return (
       <aside className="sidebar">
         <div className="sidebar-section">

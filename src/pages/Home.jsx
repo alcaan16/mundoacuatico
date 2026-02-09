@@ -1,6 +1,4 @@
-
-
-export function Hero() {
+export default function HomePage() {
   return (
     <section className="hero">
       <div className="hero-bg">

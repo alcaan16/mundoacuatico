@@ -44,6 +44,7 @@ export function CategoryCard({ category }) {
 
           <Link
             to={`/category/${category.slug}`}
+            //to={`/category/ciclidos`}
             className="btn-explore"
           >
             Explorar Especies

@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "name": "Neon Tetra",
+  "slug": "neon-tetra",
+  "scientific": "Paracheirodon innesi",
+  "category_slug": "tetras",
+  "level": "Principiante",
+  "description": "El Tetra Neón es uno de los peces tropicales más populares...",
+  "description_full": "Los Tetras Neón prosperan en tanques densamente plantados con iluminación tenue. Prefieren agua blanda y ácida...",
+  "image": "/fish/neon-main.jpg",
+  "gallery": ["/fish/neon-1.jpg", "/fish/neon-2.jpg", "/fish/neon-3.jpg"],
+  "specs": {
+    "temp": "21° - 27° C",
+    "ph": "6.0 - 7.0",
+    "hardness": "Blanda",
+    "max_size": "4 cm",
+    "min_tank": "40 Litros"
+  },
+  "compatibility": {
+    "summary": "Pacífico",
+    "partners": [
+      { "name": "Corydoras", "type": "great" },
+      { "name": "Guppies", "type": "great" },
+      { "name": "Betta", "type": "warning" }
+    ]
+  }
+}

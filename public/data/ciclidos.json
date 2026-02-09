@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "Altum Peru",
+    "slug": "altum-peru",
+    "scientific": "Pterophyllum altum",
+    "category_slug": "ciclidos",
+    "level": "Experto",
+    "origin": "Sudamérica",
+    "biotope": "Río Orinoco",
+    "description": "Cíclido majestuoso de cuerpo comprimido y aletas muy alargadas, requiere acuarios altos.",
+    "image": "/fish/altum-peru.jpg",
+    "parameters": {
+      "ph": "4.5 - 6.5",
+      "temp": "28°C - 30°C",
+      "gh": "1 - 5 dGH"
+    },
+    "care_info": {
+      "min_liters": 200,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico / Territorial",
+      "swim_level": "Medio / Alto"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Pez Disco Blue Diamond",
+    "slug": "disco-blue-diamond",
+    "scientific": "Symphysodon aequifasciatus",
+    "category_slug": "ciclidos",
+    "level": "Experto",
+    "origin": "Sudamérica",
+    "biotope": "Cuenca del Amazonas",
+    "description": "El rey del acuario, conocido por su forma circular y requerimientos estrictos de higiene del agua.",
+    "image": "/fish/disco-blue.jpg",
+    "parameters": {
+      "ph": "5.5 - 6.5",
+      "temp": "28°C - 31°C",
+      "gh": "2 - 8 dGH"
+    },
+    "care_info": {
+      "min_liters": 300,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico / Asustadizo",
+      "swim_level": "Medio"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Ramirezi Común",
+    "slug": "ramirezi-comun",
+    "scientific": "Mikrogeophagus ramirezi",
+    "category_slug": "ciclidos",
+    "level": "Intermedio",
+    "origin": "Sudamérica",
+    "biotope": "Ríos de los Llanos (Venezuela/Colombia)",
+    "description": "Cíclido enano de colores vibrantes, ideal para acuarios plantados con compañeros pacíficos.",
+    "image": "/fish/ramirezi.jpg",
+    "parameters": {
+      "ph": "5.5 - 7.0",
+      "temp": "26°C - 29°C",
+      "gh": "3 - 10 dGH"
+    },
+    "care_info": {
+      "min_liters": 60,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico",
+      "swim_level": "Bajo / Medio"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Cíclido Joya",
+    "slug": "ciclido-joya",
+    "scientific": "Hemichromis bimaculatus",
+    "category_slug": "ciclidos",
+    "level": "Principiante",
+    "origin": "África",
+    "biotope": "Ríos de África Occidental",
+    "description": "Destaca por su color rojo intenso, especialmente durante la época de cría, pero es muy territorial.",
+    "image": "/fish/ciclido-joya.jpg",
+    "parameters": {
+      "ph": "6.5 - 7.5",
+      "temp": "22°C - 27°C",
+      "gh": "8 - 15 dGH"
+    },
+    "care_info": {
+      "min_liters": 100,
+      "diet": "Carnívoro",
+      "temperament": "Agresivo",
+      "swim_level": "Bajo / Medio"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Apistogramma Agassizii",
+    "slug": "apistogramma-agassizii",
+    "scientific": "Apistogramma agassizii",
+    "category_slug": "ciclidos",
+    "level": "Intermedio",
+    "origin": "Sudamérica",
+    "biotope": "Ríos de aguas negras (Blackwater)",
+    "description": "Cíclido enano amazónico que habita entre la hojarasca y raíces del fondo.",
+    "image": "/fish/apisto-agassizii.jpg",
+    "parameters": {
+      "ph": "5.0 - 6.5",
+      "temp": "25°C - 28°C",
+      "gh": "1 - 6 dGH"
+    },
+    "care_info": {
+      "min_liters": 60,
+      "diet": "Carnívoro / Insectívoro",
+      "temperament": "Pacífico",
+      "swim_level": "Bajo"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Kribensis",
+    "slug": "kribensis",
+    "scientific": "Pelvicachromis pulcher",
+    "category_slug": "ciclidos",
+    "level": "Principiante",
+    "origin": "África",
+    "biotope": "Ríos sombreados de Nigeria y Camerún",
+    "description": "Excelente para principiantes que quieren ver el comportamiento de cría de los cíclidos.",
+    "image": "/fish/kribensis.jpg",
+    "parameters": {
+      "ph": "6.0 - 7.5",
+      "temp": "24°C - 27°C",
+      "gh": "5 - 12 dGH"
+    },
+    "care_info": {
+      "min_liters": 80,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico / Territorial en cría",
+      "swim_level": "Bajo / Medio"
+    }
+  }
+]

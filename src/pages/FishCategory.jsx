@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Importamos Link para navegación SPA
+import { useFetchCategories } from "../hook/useFetchCategories.js";
+import { CategoryCard } from "../components/CategoryFishCard.jsx";
+import { CategorySidebar } from "../components/CategoryFishSidebar.jsx";
+import { Link } from "react-router-dom";
 import "./FishCategory.css";
-import { useFetchCategories } from "./hook/useFetchCategories.js";
-import { CategoryCard } from "./components/CategoryCard.jsx";
-import { Sidebar } from "./components/Sidebar.jsx";
 
 //const { categories, loading, error } = useFishData();
-export function FishCategory() {
+export default function FishCategory() {
   const { categories } = useFetchCategories();
+
   const ORIGINS = ["Todos", ...new Set(categories.map((c) => c.origin))];
   const LEVELS = ["Todos", "Facil", "Intermedio", "Experto"];
-
 
   // --- PÁGINA PRINCIPAL ---
 
@@ -32,11 +32,15 @@ export function FishCategory() {
 
   return (
     <div className="category-page container">
+      <nav className="breadcrumbs">
+        <Link to="/">{"Inicio".toUpperCase()}</Link> /
+        <span className="breadcrumb-current">{"Categorias".toUpperCase()}</span>
+      </nav>
       <header className="category-header">
         <div>
           <h1 className="page-title">Familias de Peces</h1>
           <p className="page-desc">
-            Navega por las principales familias para encontrar la especie
+            Navega por las principales Categorias para encontrar la especie
             perfecta para tu biotipo.
           </p>
         </div>
@@ -46,7 +50,7 @@ export function FishCategory() {
       </header>
 
       <div className="category-layout">
-        <Sidebar
+        <CategorySidebar
           filters={filters}
           onFilterChange={handleFilterChange}
           ORIGINS={ORIGINS}

@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export function useFetchCategories() {
-  const [categories, setCategories] = useState([]);
+export function useFetchFishDetail(fishSlug) {
+  const [fish, setFish] = useState(null);
   const [loading, setLoading] = useState(true); // Nuevo estado de carga
 
   useEffect(() => {
     // Fíjate en la ruta: empieza con barra "/" porque está en public
-    fetch("/data/categories-list.json")
+    fetch(`/data/${fishSlug}.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error al cargar los datos");
@@ -14,15 +14,14 @@ export function useFetchCategories() {
         return response.json();
       })
       .then((data) => {
-        setCategories(data);
+        setFish(data);
         setLoading(false); // ¡Ya tenemos datos!
       })
       .catch((err) => {
         console.error(err);
         setLoading(false);
       });
-  }, []);
+  }, [fishSlug]);
 
-  // Devolvemos un objeto para que sea más fácil de expandir en el futuro
-  return { categories, loading };
+  return { fish, loading };
 }

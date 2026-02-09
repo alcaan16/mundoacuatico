@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 // --- DATOS CONSTANTES (Configuración) ---
 const NAV_LINKS = [
   { label: "Inicio", path: "/" },
-  { label: "Especies", path: "/category" },
-  { label: "Cuidados", path: "#" },
-  { label: "Comunidad", path: "#" },
+  { label: "Especies", path: "/category" }
 ];
 
 export function Header() {
@@ -16,7 +14,7 @@ export function Header() {
           to="/"
           className="brand"
         >
-          <h2>Aquarium Hub</h2>
+          <h2>Mundo Acuático 🐟</h2>
         </Link>
 
         <nav className="nav-links">
@@ -31,10 +29,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="nav-actions">
-          <button className="btn btn-ghost">Entrar</button>
-          <button className="btn btn-primary">Registro</button>
-        </div>
+
       </div>
     </header>
   );

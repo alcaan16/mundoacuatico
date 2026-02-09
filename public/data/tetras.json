@@ -1,0 +1,140 @@
+[
+  {
+    "id": 7,
+    "name": "Tetra Cardenal",
+    "slug": "tetra-cardenal",
+    "scientific": "Paracheirodon axelrodi",
+    "category_slug": "tetras",
+    "level": "Principiante",
+    "origin": "Sudamérica",
+    "biotope": "Ríos de aguas negras (Río Negro y Orinoco)",
+    "description": "Famoso por su franja roja completa, es un pez de cardumen pacífico y muy llamativo.",
+    "image": "/public/categories/tetras.webp",
+    "parameters": {
+      "ph": "4.0 - 6.5",
+      "temp": "24°C - 30°C",
+      "gh": "1 - 4 dGH"
+    },
+    "care_info": {
+      "min_liters": 60,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico",
+      "swim_level": "Medio"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Borrachito",
+    "slug": "borrachito",
+    "scientific": "Hemigrammus rhodostomus",
+    "category_slug": "tetras",
+    "level": "Intermedio",
+    "origin": "Sudamérica",
+    "biotope": "Cuenca del Amazonas y Río Orinoco",
+    "description": "Excelente indicador de la calidad del agua; su cara roja pierde intensidad si los parámetros no son óptimos.",
+    "image": "/fish/borrachito.jpg",
+    "parameters": {
+      "ph": "5.5 - 7.0",
+      "temp": "24°C - 28°C",
+      "gh": "2 - 10 dGH"
+    },
+    "care_info": {
+      "min_liters": 80,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico / Gran cardumen",
+      "swim_level": "Medio"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Tetra Fantasma Negro",
+    "slug": "tetra-fantasma-negro",
+    "scientific": "Hyphessobrycon megalopterus",
+    "category_slug": "tetras",
+    "level": "Principiante",
+    "origin": "Sudamérica",
+    "biotope": "Cuenca del río Paraguay y Guaporé",
+    "description": "Destaca por sus aletas largas y su cuerpo semitransparente con una mancha negra distintiva.",
+    "image": "/fish/fantasma-negro.jpg",
+    "parameters": {
+      "ph": "6.0 - 7.5",
+      "temp": "23°C - 27°C",
+      "gh": "5 - 12 dGH"
+    },
+    "care_info": {
+      "min_liters": 60,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico",
+      "swim_level": "Medio"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Tetra de Escala de Diamante",
+    "slug": "tetra-diamante",
+    "scientific": "Moenkhausia pittieri",
+    "category_slug": "tetras",
+    "level": "Intermedio",
+    "origin": "Sudamérica",
+    "biotope": "Lago de Valencia (Venezuela)",
+    "description": "Sus escamas brillan como pequeños diamantes bajo la iluminación adecuada del acuario.",
+    "image": "/fish/tetra-diamante.jpg",
+    "parameters": {
+      "ph": "6.0 - 7.0",
+      "temp": "24°C - 28°C",
+      "gh": "4 - 12 dGH"
+    },
+    "care_info": {
+      "min_liters": 100,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico / Activo",
+      "swim_level": "Medio / Alto"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Tetra Limón",
+    "slug": "tetra-limon",
+    "scientific": "Hyphessobrycon pulchripinnis",
+    "category_slug": "tetras",
+    "level": "Principiante",
+    "origin": "Sudamérica",
+    "biotope": "Río Tapajós (Amazonas)",
+    "description": "Un pez muy resistente con una coloración amarilla translúcida y ojos rojos intensos.",
+    "image": "/fish/tetra-limon.jpg",
+    "parameters": {
+      "ph": "6.0 - 7.5",
+      "temp": "23°C - 28°C",
+      "gh": "3 - 12 dGH"
+    },
+    "care_info": {
+      "min_liters": 60,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico",
+      "swim_level": "Medio"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Tetra Emperador",
+    "slug": "tetra-emperador",
+    "scientific": "Nematobrycon palmeri",
+    "category_slug": "tetras",
+    "level": "Intermedio",
+    "origin": "Sudamérica",
+    "biotope": "Ríos Atrato y San Juan (Colombia)",
+    "description": "Luce una apariencia elegante con una banda negra lateral y ojos azules eléctricos; no tiene aleta adiposa.",
+    "image": "/fish/tetra-emperador.jpg",
+    "parameters": {
+      "ph": "6.0 - 7.5",
+      "temp": "23°C - 27°C",
+      "gh": "5 - 12 dGH"
+    },
+    "care_info": {
+      "min_liters": 80,
+      "diet": "Omnívoro",
+      "temperament": "Pacífico / Territorial entre machos",
+      "swim_level": "Medio"
+    }
+  }
+]
