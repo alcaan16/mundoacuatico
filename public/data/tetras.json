@@ -9,7 +9,7 @@
     "origin": "Sudamérica",
     "biotope": "Ríos de aguas negras (Río Negro y Orinoco)",
     "description": "Famoso por su franja roja completa, es un pez de cardumen pacífico y muy llamativo.",
-    "image": "./categories/tetras.webp",
+    "image": "/categories/tetra-cardenal.webp",
     "parameters": {
       "ph": "4.0 - 6.5",
       "temp": "24°C - 30°C",

@@ -10,7 +10,7 @@
     "biotope": "Amazonas",
     "water_type": "Dulce",
     "description": "Peces territoriales con gran personalidad y cuidados parentales.",
-    "image": "./categories/ciclidos.webp"
+    "image": "/categories/ciclidos.webp"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "biotope": "Aguas Negras",
     "water_type": "Dulce",
     "description": "Pequeños peces de cardumen vibrantes para acuarios plantados.",
-    "image": "./categories/tetras.webp"
+    "image": "/categories/tetras.webp"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "biotope": "Ríos de Corriente",
     "water_type": "Dulce",
     "description": "Peces gato acorazados especializados en superficies y madera.",
-    "image": "./categories/loricaridos.webp"
+    "image": "/categories/loricaridos.webp"
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "biotope": "Fondos Arenosos",
     "water_type": "Dulce",
     "description": "Siluriformes pacíficos de fondo como las Corydoras.",
-    "image": "./categories/calictidos.jpg"
+    "image": "/categories/calictidos.jpg"
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
     "biotope": "Ríos y Arrozales",
     "water_type": "Dulce",
     "description": "Familia diversa que incluye Rasboras, Barbos y Danios.",
-    "image": "./categories/ciprinidos.webp"
+    "image": "/categories/ciprinidos.webp"
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
     "biotope": "Aguas Estancadas",
     "water_type": "Dulce",
     "description": "Peces que respiran aire atmosférico como Bettas y Gouramis.",
-    "image": "./categories/laberintidos.jpg"
+    "image": "/categories/laberintidos.jpg"
   },
   {
     "id": 7,
@@ -88,6 +88,6 @@
     "biotope": "Ríos y Desembocaduras",
     "water_type": "Dulce",
     "description": "Peces de fácil reproducción cuyos alevines nacen ya formados.",
-    "image": "./categories/viviparos.jpg"
+    "image": "/categories/viviparos.jpg"
   }
 ]
