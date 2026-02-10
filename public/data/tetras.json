@@ -9,7 +9,7 @@
     "origin": "Sudamérica",
     "biotope": "Ríos de aguas negras (Río Negro y Orinoco)",
     "description": "Famoso por su franja roja completa, es un pez de cardumen pacífico y muy llamativo.",
-    "image": "/categories/tetra-cardenal.webp",
+    "image": "/images/fish/tetra-cardenal.webp",
     "parameters": {
       "ph": "4.0 - 6.5",
       "temp": "24°C - 30°C",
@@ -32,7 +32,7 @@
     "origin": "Sudamérica",
     "biotope": "Cuenca del Amazonas y Río Orinoco",
     "description": "Excelente indicador de la calidad del agua; su cara roja pierde intensidad si los parámetros no son óptimos.",
-    "image": "/fish/borrachito.jpg",
+    "image": "/images/fish/borrachito.webp",
     "parameters": {
       "ph": "5.5 - 7.0",
       "temp": "24°C - 28°C",
@@ -55,7 +55,7 @@
     "origin": "Sudamérica",
     "biotope": "Cuenca del río Paraguay y Guaporé",
     "description": "Destaca por sus aletas largas y su cuerpo semitransparente con una mancha negra distintiva.",
-    "image": "/fish/fantasma-negro.jpg",
+    "image": "/images/fish/fantasma-negro.webp",
     "parameters": {
       "ph": "6.0 - 7.5",
       "temp": "23°C - 27°C",
@@ -78,7 +78,7 @@
     "origin": "Sudamérica",
     "biotope": "Lago de Valencia (Venezuela)",
     "description": "Sus escamas brillan como pequeños diamantes bajo la iluminación adecuada del acuario.",
-    "image": "/fish/tetra-diamante.jpg",
+    "image": "/images/fish/tetra-diamante.webp",
     "parameters": {
       "ph": "6.0 - 7.0",
       "temp": "24°C - 28°C",
@@ -101,7 +101,7 @@
     "origin": "Sudamérica",
     "biotope": "Río Tapajós (Amazonas)",
     "description": "Un pez muy resistente con una coloración amarilla translúcida y ojos rojos intensos.",
-    "image": "/fish/tetra-limon.jpg",
+    "image": "/images/fish/tetra-limon.webp",
     "parameters": {
       "ph": "6.0 - 7.5",
       "temp": "23°C - 28°C",
@@ -124,7 +124,7 @@
     "origin": "Sudamérica",
     "biotope": "Ríos Atrato y San Juan (Colombia)",
     "description": "Luce una apariencia elegante con una banda negra lateral y ojos azules eléctricos; no tiene aleta adiposa.",
-    "image": "/fish/tetra-emperador.jpg",
+    "image": "/images/fish/tetra-emperador.webp",
     "parameters": {
       "ph": "6.0 - 7.5",
       "temp": "23°C - 27°C",

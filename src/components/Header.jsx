@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 // --- DATOS CONSTANTES (Configuración) ---
 const NAV_LINKS = [
   { label: "Inicio", path: "/" },
-  { label: "Especies", path: "/category" }
+  { label: "Especies", path: "/category" },
+  { label: "Login", path: "/login" }
 ];
 
 export function Header() {
@@ -19,13 +20,15 @@ export function Header() {
 
         <nav className="nav-links">
           {NAV_LINKS.map(({ label, path }) => (
-            <Link
+            <NavLink
               key={label}
               to={path}
-              className="nav-link"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-links"
+              }
             >
               {label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 

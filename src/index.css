@@ -119,6 +119,13 @@ img {
   gap: 1rem;
 }
 
+.nav-link.active {
+  color: var(--primary);
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+
 /* --- HERO SECTION --- */
 .hero {
   position: relative;

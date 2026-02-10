@@ -3,7 +3,7 @@ export default function HomePage() {
     <section className="hero">
       <div className="hero-bg">
         <img
-          src="/fondo2.png"
+          src="/images/ui/fondo.webp"
           alt="Fondo acuario"
         />
         <div className="overlay" />

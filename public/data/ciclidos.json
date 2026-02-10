@@ -9,7 +9,7 @@
     "origin": "Sudamérica",
     "biotope": "Río Orinoco",
     "description": "Cíclido majestuoso de cuerpo comprimido y aletas muy alargadas, requiere acuarios altos.",
-    "image": "/fish/altum-peru.jpg",
+    "image": "/images/fish/altum-peru.webp",
     "parameters": {
       "ph": "4.5 - 6.5",
       "temp": "28°C - 30°C",
@@ -32,7 +32,7 @@
     "origin": "Sudamérica",
     "biotope": "Cuenca del Amazonas",
     "description": "El rey del acuario, conocido por su forma circular y requerimientos estrictos de higiene del agua.",
-    "image": "/fish/disco-blue.jpg",
+    "image": "/images/fish/disco-blue.webp",
     "parameters": {
       "ph": "5.5 - 6.5",
       "temp": "28°C - 31°C",
@@ -55,7 +55,7 @@
     "origin": "Sudamérica",
     "biotope": "Ríos de los Llanos (Venezuela/Colombia)",
     "description": "Cíclido enano de colores vibrantes, ideal para acuarios plantados con compañeros pacíficos.",
-    "image": "/fish/ramirezi.jpg",
+    "image": "/images/fish/ramirezi.webp",
     "parameters": {
       "ph": "5.5 - 7.0",
       "temp": "26°C - 29°C",
@@ -78,7 +78,7 @@
     "origin": "África",
     "biotope": "Ríos de África Occidental",
     "description": "Destaca por su color rojo intenso, especialmente durante la época de cría, pero es muy territorial.",
-    "image": "/fish/ciclido-joya.jpg",
+    "image": "/images/fish/ciclido-joya.webp",
     "parameters": {
       "ph": "6.5 - 7.5",
       "temp": "22°C - 27°C",
@@ -101,7 +101,7 @@
     "origin": "Sudamérica",
     "biotope": "Ríos de aguas negras (Blackwater)",
     "description": "Cíclido enano amazónico que habita entre la hojarasca y raíces del fondo.",
-    "image": "/fish/apisto-agassizii.jpg",
+    "image": "/images/fish/apisto-agassizii.webp",
     "parameters": {
       "ph": "5.0 - 6.5",
       "temp": "25°C - 28°C",
@@ -124,7 +124,7 @@
     "origin": "África",
     "biotope": "Ríos sombreados de Nigeria y Camerún",
     "description": "Excelente para principiantes que quieren ver el comportamiento de cría de los cíclidos.",
-    "image": "/fish/kribensis.jpg",
+    "image": "/images/fish/kribensis.webp",
     "parameters": {
       "ph": "6.0 - 7.5",
       "temp": "24°C - 27°C",

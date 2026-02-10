@@ -7,8 +7,12 @@
   "level": "Principiante",
   "description": "El Tetra Neón es uno de los peces tropicales más populares...",
   "description_full": "Los Tetras Neón prosperan en tanques densamente plantados con iluminación tenue. Prefieren agua blanda y ácida...",
-  "image": "/fish/neon-main.jpg",
-  "gallery": ["/fish/neon-1.jpg", "/fish/neon-2.jpg", "/fish/neon-3.jpg"],
+  "image": "/images/fish/neonwebp",
+  "gallery": [
+    "/images/fish/neon-1webp",
+    "/images/fish/neon-2webp",
+    "/images/fish/neon-3webp"
+  ],
   "specs": {
     "temp": "21° - 27° C",
     "ph": "6.0 - 7.0",
