@@ -106,19 +106,96 @@
   border: 1px solid var(--border-color);
   font-size: 0.85rem;
   color: var(--text-muted);
+  background-color: transparent;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .chip:hover {
   border-color: var(--text-muted);
   color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.chip.active {
-  background-color: var(--text-main);
-  color: var(--bg-body);
-  border-color: var(--text-main);
-  font-weight: 700;
+/* --- Variaciones de Color por Nivel --- */
+
+/* Fácil / Principiante -> Verde */
+.chip-facil,
+.chip-principiante {
+  border-color: rgba(16, 185, 129, 0.3);
+  color: rgba(16, 185, 129, 0.9);
+}
+.chip-facil:hover,
+.chip-principiante:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: rgb(16, 185, 129);
+}
+.chip-facil.active,
+.chip-principiante.active {
+  background-color: rgba(16, 185, 129, 0.9);
+  color: white;
+  border-color: rgba(16, 185, 129, 0.9);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Intermedio / Medio -> Ambar/Naranja */
+.chip-intermedio,
+.chip-medio {
+  border-color: rgba(245, 158, 11, 0.3);
+  color: rgba(245, 158, 11, 0.9);
+}
+.chip-intermedio:hover,
+.chip-medio:hover {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.6);
+  color: rgb(245, 158, 11);
+}
+.chip-intermedio.active,
+.chip-medio.active {
+  background-color: rgba(245, 158, 11, 0.9);
+  color: white;
+  border-color: rgba(245, 158, 11, 0.9);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+/* Experto / Difícil -> Rojo */
+.chip-experto,
+.chip-dificil {
+  border-color: rgba(239, 68, 68, 0.3);
+  color: rgba(239, 68, 68, 0.9);
+}
+.chip-experto:hover,
+.chip-dificil:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: rgb(239, 68, 68);
+}
+.chip-experto.active,
+.chip-dificil.active {
+  background-color: rgba(239, 68, 68, 0.9);
+  color: white;
+  border-color: rgba(239, 68, 68, 0.9);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+
+/* Todos -> Neutro / General */
+.chip-todos {
+  border-color: rgba(148, 163, 184, 0.3);
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.chip-todos:hover {
+  background-color: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.6);
+  color: rgb(226, 232, 240);
+}
+
+.chip-todos.active {
+  background-color: rgba(148, 163, 184, 0.9);
+  color: white;
+  border-color: rgba(148, 163, 184, 0.9);
+  box-shadow: 0 0 10px rgba(148, 163, 184, 0.4);
 }
 
 /* --- GRID DE TARJETAS --- */
@@ -137,7 +214,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   height: 100%;
 }
 
@@ -169,7 +248,7 @@
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
   pointer-events: none;
 }
 
@@ -185,14 +264,22 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(4px);
 }
 
-.bg-green { background-color: rgba(16, 185, 129, 0.9); } /* Emerald */
-.bg-yellow { background-color: rgba(245, 158, 11, 0.9); } /* Amber */
-.bg-red { background-color: rgba(239, 68, 68, 0.9); }     /* Red */
-.bg-gray { background-color: rgba(100, 116, 139, 0.9); }
+.bg-green {
+  background-color: rgba(16, 185, 129, 0.9);
+} /* Emerald */
+.bg-yellow {
+  background-color: rgba(245, 158, 11, 0.9);
+} /* Amber */
+.bg-red {
+  background-color: rgba(239, 68, 68, 0.9);
+} /* Red */
+.bg-gray {
+  background-color: rgba(100, 116, 139, 0.9);
+}
 
 /* Contenido de la tarjeta */
 .card-content {
@@ -226,7 +313,7 @@
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.5;
-  
+
   /* Limitar a 3 líneas con puntos suspensivos */
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -298,17 +385,17 @@
     border-radius: var(--radius);
     border: 1px solid var(--border-color);
   }
-  
+
   .filter-list {
     flex-direction: row; /* Filtros horizontales en tablet/móvil */
     overflow-x: auto;
     padding-bottom: 0.5rem;
   }
-  
+
   .filter-btn {
     white-space: nowrap;
     width: auto;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
   }
 }
 /* --- Estilos Específicos para FishCard (Parámetros) --- */

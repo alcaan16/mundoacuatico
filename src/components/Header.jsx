@@ -28,8 +28,9 @@ export function Header() {
             <NavLink
               key={label}
               to={path}
+              end={path === "/"} // Para que "/" no coincida con todo (prefix matching)
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-links"
+                isActive ? "nav-link active" : "nav-link"
               }
             >
               {label}

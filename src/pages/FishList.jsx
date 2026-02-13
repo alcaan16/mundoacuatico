@@ -1,61 +1,99 @@
-import { useState } from "react";
-import { useFetchFishList } from "../hook/useFetchFishList.js"; // Tu hook
+import { useFetchFishList } from "../hook/useFetchFishList.js";
 import { FishListSidebar } from "../components/FishListSidebar.jsx";
 import { FishListCard } from "../components/FishListCard.jsx";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useSearchParams } from "react-router-dom";
+import { Pagination } from "../components/Pagination.jsx";
 import "./FishList.css";
 
 export default function FishList() {
   const { categorySlug } = useParams();
-  const { fishes, loading } = useFetchFishList(categorySlug); // Asumimos que tu hook ahora devuelve 'fishes'
-  // Estado para los filtros (incluimos family)
-  const [filters, setFilters] = useState({
-    origin: "Todos",
-    level: "Todos",
-  });
-  
+  const { fishes, loading } = useFetchFishList(categorySlug);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const currentOrigin = searchParams.get("origin") || "Todos";
+  const currentLevel = searchParams.get("level") || "Todos";
+  const currentSearch = searchParams.get("search") || "";
+  const currentPage = parseInt(searchParams.get("page") || "1", 10);
+
   if (!fishes) {
     return (
-      (
-        <div
-          className="container"
-          style={{ padding: "5rem", textAlign: "center" }}
+      <div
+        className="container"
+        style={{ padding: "5rem", textAlign: "center" }}
+      >
+        <h2>⚠️ Categoria no encontrado</h2>
+        <Link
+          to={`/category`}
+          className="btn btn-primary"
+          style={{ marginTop: "2rem", display: "inline-block" }}
         >
-          <h2>⚠️ Categoria no encontrado</h2>
-          <Link
-            to={`/category`}
-            className="btn btn-primary"
-            style={{ marginTop: "2rem", display: "inline-block" }}
-          >
-            Volver al catálogo
-          </Link>
-        </div>
-      )
+          Volver al catálogo
+        </Link>
+      </div>
     );
   }
-  
+
   if (loading) return <div>Cargando...</div>;
 
-  // --- LÓGICA DE DATOS DINÁMICOS (Midudev Style: Calculated derived state) ---
+  // --- LÓGICA DE DATOS DINÁMICOS ---
 
-  // 1. Extraemos las opciones únicas disponibles en tu JSON
+  // 1. Extraemos las opciones únicas disponibles en el JSON
+  // Usamos Set para evitar duplicados y que se adapte a los datos (e.g. "facil", "medio")
   const uniqueOrigins = ["Todos", ...new Set(fishes.map((f) => f.origin))];
-  const uniqueLevels = ["Todos", "Fácil", "Intermedio", "Experto"];
+  const uniqueLevels = ["Todos", ...new Set(fishes.map((f) => f.level))];
 
   // 2. Filtramos los peces
   const filteredFishes = fishes.filter((fish) => {
-    // Si el filtro es "Todos", pasa. Si no, tiene que coincidir.
     const matchOrigin =
-      filters.origin === "Todos" || fish.origin === filters.origin;
-    const matchLevel =
-      filters.level === "Todos" || fish.level === filters.level;
+      currentOrigin === "Todos" || fish.origin === currentOrigin;
+    const matchLevel = currentLevel === "Todos" || fish.level === currentLevel;
+    const matchSearch = fish.name
+      .toLowerCase()
+      .includes(currentSearch.toLowerCase());
 
-    return matchOrigin && matchLevel;
+    return matchOrigin && matchLevel && matchSearch;
   });
 
-  // Handler genérico para actualizar filtros
+  // 3. Paginación
+  const RESULTS_PER_PAGE = 4;
+  const totalPages = Math.ceil(filteredFishes.length / RESULTS_PER_PAGE);
+
+  const pagedFishes = filteredFishes.slice(
+    (currentPage - 1) * RESULTS_PER_PAGE,
+    currentPage * RESULTS_PER_PAGE,
+  );
+
+  const handlePageChange = (page) => {
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      newParams.set("page", page.toString());
+      return newParams;
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleFilterChange = (key, value) => {
-    setFilters((prev) => ({ ...prev, [key]: value }));
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      if (value === "Todos" || value === "") {
+        if (key === "search") newParams.delete(key);
+        else newParams.set(key, "Todos");
+      } else {
+        newParams.set(key, value);
+      }
+      newParams.set("page", "1"); // Reset a página 1 al filtrar
+      return newParams;
+    });
+  };
+
+  const handleSearchChange = (e) => {
+    handleFilterChange("search", e.target.value);
+  };
+
+  const filters = {
+    origin: currentOrigin,
+    level: currentLevel,
   };
 
   return (
@@ -78,6 +116,27 @@ export default function FishList() {
         </span>
       </header>
 
+      {/* Barra de búsqueda */}
+      <div
+        className="search-container"
+        style={{ marginBottom: "1rem" }}
+      >
+        <input
+          type="text"
+          placeholder="Buscar pez..."
+          value={currentSearch}
+          onChange={handleSearchChange}
+          className="form-control"
+          style={{
+            width: "100%",
+            maxWidth: "300px",
+            padding: "0.5rem",
+            borderRadius: "0.25rem",
+            border: "1px solid #ccc",
+          }}
+        />
+      </div>
+
       <div className="fish-layout">
         <FishListSidebar
           filters={filters}
@@ -88,14 +147,24 @@ export default function FishList() {
         />
 
         <main className="fish-grid">
-          {filteredFishes.map((fish) => (
-            <FishListCard
-              key={fish.id}
-              fish={fish}
-            />
-          ))}
+          {pagedFishes.length > 0 ? (
+            pagedFishes.map((fish) => (
+              <FishListCard
+                key={fish.id}
+                fish={fish}
+              />
+            ))
+          ) : (
+            <p>No se encontraron peces con esos filtros.</p>
+          )}
         </main>
       </div>
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 }
