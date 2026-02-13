@@ -184,16 +184,77 @@
 .add-btn {
   width: 100%;
   padding: 1rem;
-  background: var(--color-primary);
+  background:rgb(12, 166, 243);
   color: white;
   font-weight: 700;
   border-radius: var(--radius-sm);
   margin-top: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center; /* Asegura que el icono y texto estén alineados verticalmente */
   gap: 0.5rem;
+  cursor: pointer;      /* Hace que aparezca la "manito" al pasar el ratón */
+  border: none;         /* Quita el borde por defecto de los botones */
+  transition: all 0.2s; /* Hace que el cambio de color al hover sea suave */
+  &.is-applied {
+    background: #4caf50;
+    pointer-events: none;
+  }
 }
-.add-btn:hover { background: var(--color-primary-hover); }
 
-/* Material Symbols Adjustments */
-.material-symbols-outlined { vertical-align: middle; }
+.add-btn:hover { 
+  background: rgb(12, 166, 243); 
+  transform: translateY(-2px); /* Un pequeño efecto de elevación */
+}
+
+.add-btn:active {
+  transform: translateY(0); /* Al hacer clic físico, vuelve a su sitio */
+  filter: brightness(0.9);  /* Se oscurece un poco al pulsarlo */
+}
+
+.add-btn:disabled {
+  cursor: not-allowed;   
+  background-color: #ccc; 
+}
+
+.add-btn:disabled:hover {
+  background-color: #ccc;
+}
+
+.favorite-btn {
+  width: 100%;
+  padding: 1rem;
+  background:rgb(12, 166, 243);
+  color: white;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Asegura que el icono y texto estén alineados verticalmente */
+  gap: 0.5rem;
+  cursor: pointer;      /* Hace que aparezca la "manito" al pasar el ratón */
+  border: none;         /* Quita el borde por defecto de los botones */
+  transition: all 0.2s; /* Hace que el cambio de color al hover sea suave */
+  &.is-applied {
+    background: #4caf50;
+  }
+}
+
+.favorite-btn:hover { 
+  transform: translateY(-2px); /* Un pequeño efecto de elevación */
+}
+
+.favorite-btn:active {
+  transform: translateY(0); /* Al hacer clic físico, vuelve a su sitio */
+  filter: brightness(0.9);  /* Se oscurece un poco al pulsarlo */
+}
+
+.favorite-btn:disabled {
+  cursor: not-allowed;   
+  background-color: #ccc; 
+}
+
+.favorite-btn:disabled:hover {
+  background-color: #ccc; 
+}

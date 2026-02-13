@@ -4,6 +4,7 @@ import { CategoryCard } from "../components/CategoryFishCard.jsx";
 import { CategorySidebar } from "../components/CategoryFishSidebar.jsx";
 import { Link } from "react-router-dom";
 import "./FishCategory.css";
+import { Pagination } from "../components/Pagination.jsx";
 
 //const { categories, loading, error } = useFishData();
 export default function FishCategory() {
@@ -66,6 +67,8 @@ export default function FishCategory() {
           ))}
         </main>
       </div>
+          <Pagination
+          />
     </div>
   );
 }

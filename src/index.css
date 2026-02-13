@@ -219,7 +219,7 @@ img {
 
 /* --- FOOTER --- */
 .footer {
-  padding-block: 1rem ;
+  padding-block: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   background: var(--bg-darker);
 }
@@ -333,7 +333,6 @@ img {
     gap: 1rem;
     text-align: center;
   }
-
 }
 
 /* --- 404 PAGE ANIMATIONS --- */
@@ -427,4 +426,48 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* --- HEADER FAVORITES BUTTON --- */
+.nav-favorite-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-favorite-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-favorite-btn.active {
+  background: rgba(19, 164, 236, 0.15);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.fav-badge {
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  height: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding-inline: 4px;
+  line-height: 1;
 }

@@ -1,8 +1,88 @@
 import { useParams, Link } from "react-router-dom";
 import "./FishDetail.css";
 import { useFetchFishDetail } from "../hook/useFetchFishDetail";
+import { useAuthStore } from "../store/authStore";
+import { useState } from "react";
+import { useFavoritesStore } from "../store/favoritesStore";
+
+function FishDetailAddButton({ fishId }) {
+  const [isAdded, setIsAdded] = useState(false);
+  const { isLoggedIn } = useAuthStore();
+
+  const buttonClasses = isAdded ? "add-btn is-applied" : "add-btn";
+
+  const buttonText = !isAdded
+    ? "+ Añadir a Mi Acuario"
+    : "Añadido a Mi Acuario!!";
+
+  const handleAddClick = () => {
+    console.log("Agregando al pez con id:", fishId);
+    setIsAdded(true);
+  };
+
+  if (!isLoggedIn) {
+    return (
+      <button
+        disabled={!isLoggedIn}
+        className={buttonClasses}
+        onClick={handleAddClick}
+      >
+        {isLoggedIn ? "+ Añadir a Mi Acuario" : "Inicia Sesión para Añadir"}
+      </button>
+    );
+  }
+  return (
+    <button
+      disabled={!isLoggedIn}
+      className={buttonClasses}
+      onClick={handleAddClick}
+    >
+      {buttonText}
+    </button>
+  );
+}
+function FishDetailFavoriteButton({ fishId }) {
+  const { isfavorite, toggleFavorite } = useFavoritesStore();
+  const { isLoggedIn } = useAuthStore();
+
+  const buttonClasses = isfavorite(fishId)
+    ? "favorite-btn is-applied"
+    : "favorite-btn";
+
+  const buttonText = !isfavorite(fishId)
+    ? "+ Añadir a Favoritos"
+    : "Quitar de Favoritos!!";
+
+  const handleFavoriteClick = () => {
+    console.log("Agregando al pez con id:", fishId);
+    toggleFavorite(fishId);
+  };
+
+  if (!isLoggedIn) {
+    return (
+      <button
+        disabled={!isLoggedIn}
+        className={buttonClasses}
+        onClick={handleFavoriteClick}
+      >
+        {isLoggedIn ? "+ Añadir a Favoritos" : "Inicia Sesión para Añadir"}
+      </button>
+    );
+  }
+  return (
+    <button
+      disabled={!isLoggedIn}
+      className={buttonClasses}
+      onClick={handleFavoriteClick}
+    >
+      {buttonText}
+    </button>
+  );
+}
 
 export default function FishDetail() {
+  //const { isLoggedIn } = useAuthStore();
+
   const { categorySlug, fishSlug } = useParams();
 
   const { fish, loading } = useFetchFishDetail(fishSlug);
@@ -165,12 +245,9 @@ export default function FishDetail() {
                 </span>
               </div>
             </div>
-
             <div style={{ padding: "0 1.5rem 1.5rem" }}>
-              <button className="add-btn">
-                <span className="material-symbols-outlined">add</span>
-                Añadir a Mi Acuario
-              </button>
+              <FishDetailFavoriteButton fishId={fish.slug} />
+              <FishDetailAddButton fishId={fish.id} />
             </div>
           </div>
         </aside>
