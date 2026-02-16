@@ -2,11 +2,6 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useAuthStore } from "../store/authStore";
 import { useFavoritesStore } from "../store/favoritesStore";
-// --- DATOS CONSTANTES (Configuración) ---
-const NAV_LINKS = [
-  { label: "Inicio", path: "/" },
-  { label: "Especies", path: "/category" },
-];
 
 export function Header() {
   const { isLoggedIn, logout } = useAuthStore();
@@ -24,18 +19,28 @@ export function Header() {
         </Link>
 
         <nav className="nav-links">
-          {NAV_LINKS.map(({ label, path }) => (
-            <NavLink
-              key={label}
-              to={path}
-              end={path === "/"} // Para que "/" no coincida con todo (prefix matching)
-              className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
+          <NavLink
+            key="Inicio"
+            to="/"
+            end 
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-links"
+            }
+          >
+            Inicio
+          </NavLink>
+
+          <NavLink
+            key="Especies"
+            to="/category"
+            end
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-links"
+            }
+          >
+            Especies
+          </NavLink>
+
         </nav>
       </div>
 
