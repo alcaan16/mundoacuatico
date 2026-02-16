@@ -12,7 +12,7 @@ export function Header() {
     <header className="navbar">
       <div className="container navbar-content">
         <Link
-          to="/"
+          to="https://apifishs.vercel.app"
           className="brand"
         >
           <h2>Mundo Acuático 🐟</h2>
@@ -22,7 +22,7 @@ export function Header() {
           <NavLink
             key="Inicio"
             to="/"
-            end 
+            end
             className={({ isActive }) =>
               isActive ? "nav-link active" : "nav-links"
             }
@@ -40,7 +40,6 @@ export function Header() {
           >
             Especies
           </NavLink>
-
         </nav>
       </div>
 

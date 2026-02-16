@@ -6,7 +6,8 @@ export function useFetchFishDetail(fishSlug) {
 
   useEffect(() => {
     // Fíjate en la ruta: empieza con barra "/" porque está en public
-    fetch(`/data/${fishSlug}.json`)
+    //fetch(`http://localhost:1234/fish/${fishSlug}`)
+    fetch(`https://canister-api.vercel.app/fish/${fishSlug}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error al cargar los datos");

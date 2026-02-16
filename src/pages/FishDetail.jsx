@@ -151,6 +151,15 @@ export default function FishDetail() {
             />
           </section>
 
+
+          {/* Descripción / Tabs */}
+          <section className="detail-card">
+            <h2 className="card-heading">Resumen</h2>
+            <p style={{ lineHeight: "1.8", color: "var(--color-text-muted)" }}>
+              {fish.description_full || fish.description}
+            </p>
+          </section>
+
           {/* Tarjeta de Compatibilidad */}
           <section className="detail-card">
             <h3 className="card-heading">
@@ -162,12 +171,12 @@ export default function FishDetail() {
               <div className="compatibility-fill"></div>
             </div>
             <p style={{ color: "var(--color-text-muted)" }}>
-              {fish.compatibility?.summary ||
+              {fish.care_info?.temperament ||
                 "Generalmente pacífico con peces de su tamaño."}
             </p>
 
             <div className="partners-grid">
-              {fish.compatibility?.partners?.map((partner, idx) => (
+              {fish.care_info?.compatible_species?.map((partner, idx) => (
                 <div
                   key={idx}
                   className="partner-item"
@@ -189,14 +198,7 @@ export default function FishDetail() {
               )) || <p>Datos de compañeros no disponibles.</p>}
             </div>
           </section>
-
-          {/* Descripción / Tabs */}
-          <section className="detail-card">
-            <h2 className="card-heading">Resumen</h2>
-            <p style={{ lineHeight: "1.8", color: "var(--color-text-muted)" }}>
-              {fish.description_full || fish.description}
-            </p>
-          </section>
+          
         </div>
 
         {/* COLUMNA DERECHA (Sidebar Sticky) */}
@@ -208,33 +210,26 @@ export default function FishDetail() {
               <div className="spec-item">
                 <span className="spec-label">Temp</span>
                 <span className="spec-value">
-                  {fish.specs?.temp || fish.temp || "N/A"}
+                  {fish.parameters?.temp || fish.temp || "N/A"}
                 </span>
               </div>
               <div className="spec-item">
                 <span className="spec-label">pH</span>
                 <span className="spec-value">
-                  {fish.specs?.ph || fish.ph || "N/A"}
+                  {fish.parameters?.ph || fish.ph || "N/A"}
                 </span>
               </div>
               <div className="spec-item">
                 <span className="spec-label">Dureza</span>
                 <span className="spec-value">
-                  {fish.specs?.hardness || "Media"}
+                  {fish.parameters?.gh || "Media"}
                 </span>
               </div>
-              <div className="spec-item">
-                <span className="spec-label">Tamaño Máx</span>
-                <span className="spec-value">
-                  {fish.specs?.max_size || "N/A"}
-                </span>
-              </div>
-
               <div className="spec-item spec-full">
                 <div>
                   <span className="spec-label">Tanque Mínimo</span>
                   <span className="spec-value">
-                    {fish.specs?.min_tank || "N/A"}
+                    {fish.care_info?.min_liters || "N/A"}
                   </span>
                 </div>
                 <span

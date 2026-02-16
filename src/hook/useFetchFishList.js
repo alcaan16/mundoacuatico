@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
-export function useFetchFishList(categorySlug) {
+export function useFetchFishList(slug) {
   const [fishes, setFishes] = useState(null);
   const [loading, setLoading] = useState(true); // Nuevo estado de carga
 
   useEffect(() => {
     // Fíjate en la ruta: empieza con barra "/" porque está en public
-    fetch(`/data/${categorySlug}.json`)
+    //fetch(`/data/${categorySlug}.json`);
+    //fetch(`http://localhost:1234/fish?category_slug=${slug}`)
+    fetch(`https://canister-api.vercel.app/fish?category_slug=${slug}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error al cargar los datos");
@@ -21,7 +23,7 @@ export function useFetchFishList(categorySlug) {
         console.error(err);
         setLoading(false);
       });
-  }, [categorySlug]);
+  }, [slug]);
 
   return { fishes, loading };
 }
