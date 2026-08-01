@@ -1,34 +1,42 @@
-# 🐠 Mundo Acuario
+# MundoAcuático
 
-**Mundo Acuario** es tu portal definitivo para descubrir y compartir la belleza del mundo subacuático. Diseñado con pasión para acuaristas, amantes de la naturaleza y curiosos por igual, este proyecto busca inspirar y educar sobre la vida marina.
+SPA de catálogo de especies acuáticas. Consume la API propia
+[canister-api](https://github.com/alcaan16/canister-api).
 
----
+## Qué resuelve
 
-## 🌊 Explora la Vida Acuática
+Navegar un catálogo por categorías, ver la ficha de cada especie y marcar favoritos, con navegación
+sin recargas y sin descargar el catálogo completo de una vez.
 
-Sumérgete en una experiencia visual donde cada especie cuenta una historia. **Mundo Acuario** te permite conectar con la biodiversidad de nuestros océanos y ríos a través de una interfaz moderna y fluida.
+## Stack y arquitectura
 
-### ✨ Características Principales
+- **React 19 + Vite 7**.
+- **React Router 7** con rutas anidadas por categoría y ficha (`/category/:categorySlug/:fishSlug`).
+- **Zustand** para estado global: un store de sesión y otro de favoritos.
+- **Hooks propios de fetch** (`useFetchCategories`, `useFetchFishList`, `useFetchFishDetail`) que
+  encapsulan la llamada y el estado de carga. Los componentes no hacen `fetch`.
+- **Carga diferida** de todas las páginas con `lazy` + `Suspense`.
+- **Ruta protegida** mediante componente `ProtectedRoute` con redirección.
+- **Despliegue:** Vercel.
 
-- **📘 Catálogo Interactivo**: Navega por una extensa biblioteca de especies, desde los coloridos peces de arrecife hasta los majestuosos habitantes de agua dulce.
-- **🔍 Información Detallada**: Accede a fichas completas con datos sobre hábitat, alimentación y cuidados específicos para cada pez.
-- **📱 Diseño Adaptable**: Disfruta de una experiencia perfecta en cualquier dispositivo, ya sea móvil, tablet o escritorio.
-- **🚀 Navegación Fluida**: Muévete entre categorías y detalles de especies sin interrupciones, gracias a una arquitectura optimizada para la velocidad.
+## Alcance: qué está y qué no
 
----
+**Implementado:** listado y detalle contra API remota, categorías, paginación, favoritos
+persistidos en memoria de sesión, code splitting por ruta, página 404 y scroll-to-top en cada cambio
+de ruta.
 
-## 🎯 Nuestra Misión
+**No implementado:** la sesión es un indicador en cliente, **no hay backend de autenticación**: el
+login no valida credenciales contra ningún servicio y los favoritos se pierden al recargar. La URL
+de la API está fijada en los hooks en lugar de en una variable de entorno.
 
-Fomentar el conocimiento y el respeto por los ecosistemas acuáticos, proporcionando una herramienta accesible y atractiva para todos los niveles de experiencia en la acuariofilia.
+## Ejecutar en local
 
-> _"El agua es la fuerza motriz de toda la naturaleza."_ – Leonardo da Vinci
+```bash
+git clone https://github.com/alcaan16/mundoacuatico.git
+cd mundoacuatico
+npm install
+npm run dev
+```
 
----
-
-### 🌟 Únete a la Comunidad
-
-¿Te apasiona el mundo acuático tanto como a nosotros? Explora, aprende y comparte tu pasión.
-
----
-
-_(Desarrollado con ❤️ para la comunidad de acuariofilia)_
+Necesita la API disponible. Para levantarla en local, ver
+[canister-api](https://github.com/alcaan16/canister-api) y apuntar los hooks a `http://localhost:1234`.
